@@ -32,6 +32,8 @@ users:
 # Install additional packages on first boot
 packages:
 - avahi-daemon
+- screen
+- git
 # These commands will be ran once on first boot only
 runcmd:
   # Pickup the hostname changes
