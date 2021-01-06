@@ -1,6 +1,8 @@
 # rpi-ubuntu
 How to run your Raspberry Pi with Ubuntu 20.04 and Docker installed.
 
+This fork will be for use with a Raspberry Pi 3 Compute Module 32GB whose desination is for the Turing Pi version 1
+
 What you need
 - Raspberry Pi 3 or 4
 - Micro SD card
@@ -9,7 +11,7 @@ What you need
 
 ## Download
 
-You can find SD card images for the Raspberry Pi 3/4 for 64bit at https://ubuntu.com/download/raspberry-pi
+You can find SD card images for the Raspberry Pi 3 for 64bit at https://ubuntu.com/download/raspberry-pi
 
 ## Cloud-init
 
@@ -38,7 +40,7 @@ With the parameter `--hostname` or short `-n` you can adjust the hostname of the
 You can install the 64bit version only on Raspberry Pi 3 and 4.
 
 ```shell
-flash -u https://raw.githubusercontent.com/StefanScherer/rpi-ubuntu/main/user-data-ubuntu-docker \
+flash -u https://raw.githubusercontent.com/jackspace/rpi-ubuntu/main/user-data-ubuntu-docker \
   -n pi3 http://cdimage.ubuntu.com/releases/20.04/release/ubuntu-20.04-preinstalled-server-arm64+raspi.img.xz
 ```
 
@@ -73,7 +75,7 @@ I want to create my own account `stefan`, so I don't have to specify a username 
 
 ```yaml
 users:
-  - name: stefan             # use any user name you like
+  - name: jackspace             # use any user name you like
     primary-group: users
     shell: /bin/bash
     sudo: ALL=(ALL) NOPASSWD:ALL
